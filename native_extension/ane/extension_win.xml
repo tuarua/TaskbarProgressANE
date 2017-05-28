@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension xmlns="http://ns.adobe.com/air/extension/19.0">
+	<id>com.tuarua.TaskbarProgressANE</id>
+	<name>Taskbar Progress ANE</name>
+	<copyright>This work is licensed under The MIT License (MIT), Copyright 2016 Tua Rua Ltd.</copyright>
+	<versionNumber>0.0.1</versionNumber>
+	<platforms>
+	<platform name="Windows-x86">
+		<applicationDeployment>
+			<nativeLibrary>TaskbarProgressANE.dll</nativeLibrary>
+			<initializer>TRTBPExtInizer</initializer>
+			<finalizer>TRTBPExtFinizer</finalizer>
+		</applicationDeployment>
+	</platform>
+	</platforms>
+</extension>
