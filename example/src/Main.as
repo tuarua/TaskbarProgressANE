@@ -33,7 +33,7 @@ public class Main extends Sprite {
     }
 
     private function onTimer(event:TimerEvent):void {
-        var timer = event.target as Timer;
+        var timer:Timer = event.target as Timer;
         if (timer.currentCount > 50) {
             timer.reset();
             timer.stop();
