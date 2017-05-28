@@ -3,6 +3,7 @@
 	<name>TaskbarProgressANEExample</name>
 	<comment></comment>
 	<projects>
+		<project>TaskbarProgressANE</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
