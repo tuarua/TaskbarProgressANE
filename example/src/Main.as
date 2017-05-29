@@ -44,5 +44,9 @@ public class Main extends Sprite {
         textField.text = timer.currentCount + "%";
 
     }
+
+    private function onExiting(event:Event):void {
+        ane.dispose();
+    }
 }
 }

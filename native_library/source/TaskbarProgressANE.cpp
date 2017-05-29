@@ -82,6 +82,7 @@ extern "C" {
 	}
 
 	void TRTBPExtFinizer(void* extData) {
+		wp.~Win7TaskbarProgress();
 		contextFinalizer(nullptr);
 	}
 }

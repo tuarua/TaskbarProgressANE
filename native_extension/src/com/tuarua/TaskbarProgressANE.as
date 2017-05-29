@@ -40,5 +40,15 @@ public class TaskbarProgressANE extends EventDispatcher {
     public function setProgress(value:Number):void {
         extensionContext.call("setProgress", value * 100);
     }
+
+    public function dispose():void {
+        if (!extensionContext) {
+            trace("[" + name + "] Error. ANE Already in a disposed or failed state...");
+            return;
+        }
+        trace("[" + name + "] Unloading ANE...");
+        extensionContext.dispose();
+        extensionContext = null;
+    }
 }
 }
