@@ -1,4 +1,4 @@
- # TaskbarProgress ANE
+ # Taskbar Progress ANE
 
 Normal  
 ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-normal.png)
