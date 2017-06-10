@@ -1,8 +1,9 @@
- ## Taskbar Progress ANE
+## Taskbar Progress ANE
 
-|  Normal | Error | Paused    |
-|---|---|---|
-|  ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-normal.png) | ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-error.png)  | ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-paused.png)  |
+||Normal|Error|Paused |
+|---|---|---|---|
+|Windows|  ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-normal.png) | ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-error.png)  | ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-paused.png)  |
+|OSX|  ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-normal-osx.png) | ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-error-osx.png)  | ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-paused-osx.png)  |
 
 ### Windows Installation - Important!
 

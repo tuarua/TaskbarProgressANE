@@ -36,8 +36,6 @@ void contextInitializer(void *extData, const uint8_t *ctxType, FREContext ctx, u
     /********************************************************/
     
     
-
-    
     swft = [[TaskbarProgressANE alloc] init];
     [swft setFREContextWithCtx:ctx];
     
@@ -58,12 +56,12 @@ void contextFinalizer(FREContext ctx) {
     return;
 }
 
-void TRWVExtInizer(void **extData, FREContextInitializer *ctxInitializer, FREContextFinalizer *ctxFinalizer) {
+void TRTBPExtInizer(void **extData, FREContextInitializer *ctxInitializer, FREContextFinalizer *ctxFinalizer) {
     *ctxInitializer = &contextInitializer;
     *ctxFinalizer = &contextFinalizer;
 }
 
-void TRWVExtFinizer(void *extData) {
+void TRTBPExtFinizer(void *extData) {
     FREContext nullCTX;
     nullCTX = 0;
     contextFinalizer(nullCTX);

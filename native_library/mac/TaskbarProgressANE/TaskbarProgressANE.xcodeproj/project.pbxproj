@@ -11,12 +11,11 @@
 		CE9ACAA31EEC6814007F0BBE /* Adobe AIR_64 in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9ACAA21EEC6814007F0BBE /* Adobe AIR_64 */; };
 		CE9ACAA51EEC681A007F0BBE /* Adobe AIR in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9ACAA41EEC681A007F0BBE /* Adobe AIR */; };
 		CE9ACAA81EEC6862007F0BBE /* FlashRuntimeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ACAA71EEC6862007F0BBE /* FlashRuntimeExtensions.swift */; };
-		CE9ACAAC1EEC689D007F0BBE /* SwiftyJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9ACAAA1EEC689D007F0BBE /* SwiftyJSON.h */; };
-		CE9ACAAD1EEC689D007F0BBE /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ACAAB1EEC689D007F0BBE /* SwiftyJSON.swift */; };
 		CE9ACAAF1EEC68E7007F0BBE /* TaskbarProgressANE_oc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9ACAAE1EEC68E7007F0BBE /* TaskbarProgressANE_oc.h */; };
 		CE9ACAB11EEC69E7007F0BBE /* TaskbarProgressANE.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ACAB01EEC69E7007F0BBE /* TaskbarProgressANE.m */; };
 		CE9ACAB51EEC6FBF007F0BBE /* TaskbarProgressANE-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9ACAB41EEC6FBF007F0BBE /* TaskbarProgressANE-Bridging-Header.h */; };
 		CE9ACAB71EEC6FF7007F0BBE /* TaskbarProgressANE.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ACAB61EEC6FF7007F0BBE /* TaskbarProgressANE.swift */; };
+		CE9ACABA1EEC85AF007F0BBE /* DockProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ACAB91EEC85AF007F0BBE /* DockProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,13 +25,12 @@
 		CE9ACAA21EEC6814007F0BBE /* Adobe AIR_64 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "Adobe AIR_64"; path = "../../../../../sdks/AIR/AIRSDK_24/runtimes/air/mac/Adobe AIR.framework/Versions/1.0/Adobe AIR_64"; sourceTree = "<group>"; };
 		CE9ACAA41EEC681A007F0BBE /* Adobe AIR */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "Adobe AIR"; path = "/Users/User/flash/WebViewANE/native_library/mac/WebViewANE/../../../../../sdks/AIR/AIRSDK_24/runtimes/air/mac/Adobe AIR.framework/Versions/1.0/Adobe AIR"; sourceTree = "<absolute>"; };
 		CE9ACAA71EEC6862007F0BBE /* FlashRuntimeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlashRuntimeExtensions.swift; path = FRESwift/FlashRuntimeExtensions.swift; sourceTree = SOURCE_ROOT; };
-		CE9ACAAA1EEC689D007F0BBE /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
-		CE9ACAAB1EEC689D007F0BBE /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		CE9ACAAE1EEC68E7007F0BBE /* TaskbarProgressANE_oc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskbarProgressANE_oc.h; sourceTree = "<group>"; };
 		CE9ACAB01EEC69E7007F0BBE /* TaskbarProgressANE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskbarProgressANE.m; sourceTree = "<group>"; };
 		CE9ACAB21EEC6F39007F0BBE /* TaskbarProgressANE-Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TaskbarProgressANE-Swift.h"; sourceTree = "<group>"; };
 		CE9ACAB41EEC6FBF007F0BBE /* TaskbarProgressANE-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TaskbarProgressANE-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE9ACAB61EEC6FF7007F0BBE /* TaskbarProgressANE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskbarProgressANE.swift; sourceTree = "<group>"; };
+		CE9ACAB91EEC85AF007F0BBE /* DockProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +72,7 @@
 				CE9ACAA71EEC6862007F0BBE /* FlashRuntimeExtensions.swift */,
 				CE9ACAB01EEC69E7007F0BBE /* TaskbarProgressANE.m */,
 				CE9ACAB61EEC6FF7007F0BBE /* TaskbarProgressANE.swift */,
+				CE9ACAB91EEC85AF007F0BBE /* DockProgressBar.swift */,
 			);
 			path = TaskbarProgressANE;
 			sourceTree = "<group>";
@@ -91,8 +90,6 @@
 		CE9ACAA61EEC683F007F0BBE /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				CE9ACAAA1EEC689D007F0BBE /* SwiftyJSON.h */,
-				CE9ACAAB1EEC689D007F0BBE /* SwiftyJSON.swift */,
 				CE9ACA981EEC6609007F0BBE /* Info.plist */,
 			);
 			name = Misc;
@@ -116,7 +113,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9ACAAC1EEC689D007F0BBE /* SwiftyJSON.h in Headers */,
 				CE9ACAAF1EEC68E7007F0BBE /* TaskbarProgressANE_oc.h in Headers */,
 				CE9ACAB51EEC6FBF007F0BBE /* TaskbarProgressANE-Bridging-Header.h in Headers */,
 			);
@@ -199,7 +195,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ../../../native_extension/ane/build_osx.sh;
+			shellScript = ../../../native_extension/ane/build_multi.sh;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -210,8 +206,8 @@
 			files = (
 				CE9ACAB71EEC6FF7007F0BBE /* TaskbarProgressANE.swift in Sources */,
 				CE9ACAA81EEC6862007F0BBE /* FlashRuntimeExtensions.swift in Sources */,
+				CE9ACABA1EEC85AF007F0BBE /* DockProgressBar.swift in Sources */,
 				CE9ACAB11EEC69E7007F0BBE /* TaskbarProgressANE.m in Sources */,
-				CE9ACAAD1EEC689D007F0BBE /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

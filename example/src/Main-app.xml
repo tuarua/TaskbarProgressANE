@@ -125,7 +125,7 @@
 	<!-- devices supported by AIR. If you wish to restrict deployment -->
 	<!-- (i.e., to only mobile devices) then add this element and list -->
 	<!-- only the profiles which your application does support. -->
-	<!-- <supportedProfiles>desktop extendedDesktop mobileDevice extendedMobileDevice</supportedProfiles> -->
+	<supportedProfiles>extendedDesktop</supportedProfiles>
 
 	<!-- Languages supported by application -->
 	<!-- Only these languages can be specified -->
@@ -136,6 +136,13 @@
 
 	<!-- The subpath of the Programs menu to use. (Ignored on operating systems without a Programs menu.) Optional. -->
 	<!-- <programMenuFolder></programMenuFolder> -->
+
+	<icon>
+		<image16x16>appicons/16.png</image16x16>
+		<image32x32>appicons/32.png</image32x32>
+		<image128x128>appicons/128.png</image128x128>
+		<image192x192>appicons/192.png</image192x192>
+	</icon>
 
 	<!-- The icon the system uses for the application. For at least one resolution,
 	specify the path to a PNG file included in the AIR package. Optional. -->
