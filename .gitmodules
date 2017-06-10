@@ -1,0 +1,3 @@
+[submodule "native_library/mac/TaskbarProgressANE/FRESwift"]
+	path = native_library/mac/TaskbarProgressANE/FRESwift
+	url = https://github.com/tuarua/FRESwift

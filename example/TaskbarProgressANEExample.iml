@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="Flex" version="4">
-  <component name="FlexBuildConfigurationManager" active="TaskbarProgressANEExample">
+  <component name="FlexBuildConfigurationManager" active="Main">
     <configurations>
-      <configuration name="TaskbarProgressANEExample" target-platform="Desktop" pure-as="true" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/bin-debug">
-        <dependencies target-player="25.0">
+      <configuration name="Main" target-platform="Desktop" pure-as="true" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/bin-debug">
+        <dependencies>
           <entries>
+            <entry library-id="bb50824d-75c5-4f27-88ea-6998b7c28646">
+              <dependency linkage="Merged" />
+            </entry>
             <entry library-name="TaskbarProgressANE" library-level="project">
               <dependency linkage="Merged" />
             </entry>
           </entries>
           <sdk name="AIRSDK_25" />
         </dependencies>
-        <compiler-options />
-        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/src/Main-app.xml" package-file-name="Main" />
+        <compiler-options>
+          <map>
+            <entry key="compiler.locale" value="en_US" />
+          </map>
+        </compiler-options>
+        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/src/Main-app.xml" package-file-name="Main">
+          <files-to-package>
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/appicons/192.png" path-in-package="appicons/192.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/appicons/128.png" path-in-package="appicons/128.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/appicons/16.png" path-in-package="appicons/16.png" />
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/appicons/32.png" path-in-package="appicons/32.png" />
+          </files-to-package>
+        </packaging-air-desktop>
         <packaging-android />
         <packaging-ios />
       </configuration>
@@ -26,6 +40,16 @@
     </content>
     <orderEntry type="jdk" jdkName="AIRSDK_25" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="bb50824d-75c5-4f27-88ea-6998b7c28646" />
+        <CLASSES>
+          <root url="jar://$DOCUMENTS$/TaskbarProgressANE/native_extension/ane/TaskbarProgressANE.ane!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="library" exported="" name="TaskbarProgressANE" level="project" />
   </component>
 </module>

@@ -1,5 +1,3 @@
 debug/
 docs/
-build_osx_debug.sh
-extension_android.xml
-build-android-release.bat
+TaskbarProgressANE/
