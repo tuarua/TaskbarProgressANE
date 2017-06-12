@@ -11,22 +11,10 @@ import Cocoa
 
 
 @objc class TaskbarProgressANE: FRESwiftController {
-    /*
-     /*
-     * TBPF_NOPROGRESS	= 0,
-     TBPF_INDETERMINATE	= 0x1,
-     TBPF_NORMAL	= 0x2,
-     TBPF_ERROR	= 0x4,
-     TBPF_PAUSED	= 0x8
-     */
- */
-    
-    
-    
     var progress:DockProgressBar!
     
     // must have this function !!
-    // Must set const numFunctions in WebViewANE.m to the length of this Array
+    // Must set const numFunctions in TaskbarProgressANE.m to the length of this Array
     func getFunctions() -> Array<String> {
         functionsToSet["init"] = initController
         functionsToSet["setProgress"] = setProgress
