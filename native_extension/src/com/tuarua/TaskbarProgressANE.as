@@ -2,10 +2,8 @@
  * Created by Local Eoin Landy on 28/05/2017.
  */
 package com.tuarua {
-import com.tuarua.fre.ANEContext;
 
 import flash.events.EventDispatcher;
-import flash.events.IEventDispatcher;
 import flash.events.StatusEvent;
 import flash.external.ExtensionContext;
 
@@ -16,7 +14,7 @@ public class TaskbarProgressANE extends EventDispatcher {
     public static const STYLE_NORMAL:int = 0x2;
     public static const STYLE_ERROR:int = 0x4;
     public static const STYLE_PAUSED:int = 0x8;
-
+    private var ctx:ExtensionContext;
     public function TaskbarProgressANE() {
         initiate();
     }
@@ -24,8 +22,8 @@ public class TaskbarProgressANE extends EventDispatcher {
     private function initiate():void {
         trace("[" + name + "] Initalizing ANE...");
         try {
-            ANEContext.ctx = ExtensionContext.createExtensionContext("com.tuarua." + name, null);
-            ANEContext.ctx.addEventListener(StatusEvent.STATUS, gotEvent);
+            ctx = ExtensionContext.createExtensionContext("com.tuarua." + name, null);
+            ctx.addEventListener(StatusEvent.STATUS, gotEvent);
         } catch (e:Error) {
             trace("[" + name + "] ANE Not loaded properly.  Future calls will fail.");
         }
@@ -40,25 +38,25 @@ public class TaskbarProgressANE extends EventDispatcher {
     }
 
     public function init(style:int = STYLE_NORMAL):void {
-        ANEContext.ctx.call("init", style);
+        ctx.call("init", style);
     }
 
     public function setStyle(value:int):void {
-        ANEContext.ctx.call("setStyle", value);
+        ctx.call("setStyle", value);
     }
 
     public function setProgress(value:Number):void {
-        ANEContext.ctx.call("setProgress", Math.round(value * 100));
+        ctx.call("setProgress", Math.round(value * 100));
     }
 
     public function dispose():void {
-        if (!ANEContext.ctx) {
+        if (!ctx) {
             trace("[" + name + "] Error. ANE Already in a disposed or failed state...");
             return;
         }
         trace("[" + name + "] Unloading ANE...");
-        ANEContext.ctx.dispose();
-        ANEContext.ctx = null;
+        ctx.dispose();
+        ctx = null;
     }
 }
 }

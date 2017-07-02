@@ -2,6 +2,8 @@ package {
 
 import com.tuarua.TaskbarProgressANE;
 
+import flash.desktop.NativeApplication;
+
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.TimerEvent;
@@ -14,6 +16,7 @@ public class Main extends Sprite {
     private var textField:TextField = new TextField();
     public function Main() {
 
+        NativeApplication.nativeApplication.addEventListener(Event.EXITING, onExiting);
         addChild(textField);
 
         this.addEventListener(Event.ACTIVATE, onActivated);
