@@ -8,7 +8,7 @@ echo $pathtome
 
 PROJECT_NAME=TaskbarProgressANE
 
-AIR_SDK="/Users/User/sdks/AIR/AIRSDK_25"
+AIR_SDK="/Users/User/sdks/AIR/AIRSDK_26"
 echo $AIR_SDK
 
 #Setup the directory.
@@ -47,10 +47,11 @@ cp "$pathtome/library.swf" "$pathtome/platforms/win/release"
 
 #Copy native libraries into place.
 echo "Copying native libraries into place."
+
+#Copy native libraries into place.
+echo "Copying native libraries into place."
+cp -R -L "$pathtome/../../native_library/mac/$PROJECT_NAME/$PROJECT_NAME/$PROJECT_NAME-Swift.h" "$pathtome/../../native_library/mac/$PROJECT_NAME/Build/Products/Release/$PROJECT_NAME.framework/Versions/A/Headers/$PROJECT_NAME-Swift.h"
 cp -R -L "$pathtome/../../native_library/mac/$PROJECT_NAME/Build/Products/Release/$PROJECT_NAME.framework" "$pathtome/platforms/mac/release"
-
-mv "$pathtome/platforms/mac/release/$PROJECT_NAME.framework/Versions/A/Frameworks" "$pathtome/platforms/mac/release/$PROJECT_NAME.framework"
-
 rm -r "$pathtome/platforms/mac/release/$PROJECT_NAME.framework/Versions"
 
 

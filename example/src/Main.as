@@ -1,5 +1,6 @@
 package {
 
+import com.tuarua.CommonDependencies;
 import com.tuarua.TaskbarProgressANE;
 
 import flash.desktop.NativeApplication;
@@ -11,6 +12,7 @@ import flash.text.TextField;
 import flash.utils.Timer;
 
 public class Main extends Sprite {
+    private var commonDependenciesANE:CommonDependencies = new CommonDependencies();
     private var hasActivated:Boolean;
     private var ane:TaskbarProgressANE;
     private var textField:TextField = new TextField();

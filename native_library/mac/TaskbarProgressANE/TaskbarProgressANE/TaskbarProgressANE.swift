@@ -8,9 +8,9 @@
 
 import Foundation
 import Cocoa
+import FreSwift
 
-
-@objc class TaskbarProgressANE: FRESwiftController {
+@objc class TaskbarProgressANE: FreSwiftController {
     var progress:DockProgressBar!
     
     // must have this function !!
@@ -31,7 +31,7 @@ import Cocoa
     func initController(ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
         guard argc > 0,
             let inFRE0 = argv[0],
-            let style = FREObjectSwift.init(freObject: inFRE0).value as? Int
+            let style = FreObjectSwift.init(freObject: inFRE0).value as? Int
             else {
                 traceError(message: "setProgress - incorrect arguments", line: #line, column: #column, file: #file, freError: nil)
                 return nil
@@ -43,7 +43,7 @@ import Cocoa
     func setProgress(ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
         guard argc > 0,
             let inFRE0 = argv[0],
-            let val = FREObjectSwift.init(freObject: inFRE0).value as? Int
+            let val = FreObjectSwift.init(freObject: inFRE0).value as? Int
             else {
                 traceError(message: "setProgress - incorrect arguments", line: #line, column: #column, file: #file, freError: nil)
                 return nil
@@ -57,7 +57,7 @@ import Cocoa
     func setStyle(ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
         guard argc > 0,
             let inFRE0 = argv[0],
-            let style = FREObjectSwift.init(freObject: inFRE0).value as? Int
+            let style = FreObjectSwift.init(freObject: inFRE0).value as? Int
             else {
                 traceError(message: "setProgress - incorrect arguments", line: #line, column: #column, file: #file, freError: nil)
                 return nil
@@ -66,7 +66,7 @@ import Cocoa
         return nil
     }
     
-    private func traceError(message: String, line: Int, column: Int, file: String, freError: FREError?) {
+    private func traceError(message: String, line: Int, column: Int, file: String, freError: FreError?) {
         trace("ERROR:", "message:", message, "file:", "[\(file):\(line):\(column)]")
         if let freError = freError {
             trace(freError.type)
@@ -75,6 +75,6 @@ import Cocoa
     }
     
     func setFREContext(ctx: FREContext) {
-        context = FREContextSwift.init(freContext: ctx)
+        context = FreContextSwift.init(freContext: ctx)
     }
 }
