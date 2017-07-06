@@ -38,12 +38,11 @@ cp "$pathtome/library.swf" "$pathtome/platforms/mac/debug"
 
 #Copy native libraries into place.
 echo "Copying native libraries into place."
+cp -R -L "$pathtome/../../native_library/mac/$PROJECT_NAME/$PROJECT_NAME/$PROJECT_NAME-Swift.h" "$pathtome/../../native_library/mac/$PROJECT_NAME/Build/Products/Release/$PROJECT_NAME.framework/Versions/A/Headers/$PROJECT_NAME-Swift.h"
+cp -R -L "$pathtome/../../native_library/mac/$PROJECT_NAME/$PROJECT_NAME/$PROJECT_NAME-Swift.h" "$pathtome/../../native_library/mac/$PROJECT_NAME/Build/Products/Debug/$PROJECT_NAME.framework/Versions/A/Headers/$PROJECT_NAME-Swift.h"
 cp -R -L "$pathtome/../../native_library/mac/$PROJECT_NAME/Build/Products/Release/$PROJECT_NAME.framework" "$pathtome/platforms/mac/release"
 cp -R -L "$pathtome/../../native_library/mac/$PROJECT_NAME/Build/Products/Debug/$PROJECT_NAME.framework" "$pathtome/platforms/mac/debug"
 
-
-mv "$pathtome/platforms/mac/debug/$PROJECT_NAME.framework/Versions/A/Frameworks" "$pathtome/platforms/mac/debug/$PROJECT_NAME.framework"
-mv "$pathtome/platforms/mac/release/$PROJECT_NAME.framework/Versions/A/Frameworks" "$pathtome/platforms/mac/release/$PROJECT_NAME.framework"
 
 rm -r "$pathtome/platforms/mac/debug/$PROJECT_NAME.framework/Versions"
 rm -r "$pathtome/platforms/mac/release/$PROJECT_NAME.framework/Versions"

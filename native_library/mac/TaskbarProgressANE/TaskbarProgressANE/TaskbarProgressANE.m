@@ -27,25 +27,25 @@ FRE_FUNCTION(callSwiftFunction) {
 void contextInitializer(void *extData, const uint8_t *ctxType, FREContext ctx, uint32_t *numFunctionsToSet,
                         const FRENamedFunction **functionsToSet) {
     
-    /******* MAKE SURE TO SET NUM OF FUNCTIONS MANUALLY *****/
-    /********************************************************/
-    
-    const int numFunctions = 3;
-    
-    /********************************************************/
-    /********************************************************/
-    
-    
     swft = [[TaskbarProgressANE alloc] init];
     [swft setFREContextWithCtx:ctx];
     
     funcArray = [swft getFunctions];
-    static FRENamedFunction extensionFunctions[numFunctions] = {};
-    for (int i = 0; i < [funcArray count]; ++i) {
-        NSString * nme = [funcArray objectAtIndex:i];
-        FRENamedFunction nf = {(const uint8_t *) [nme UTF8String], (__bridge void *)(nme), &callSwiftFunction};
-        extensionFunctions[i] = nf;
-    }
+    /**************************************************************************/
+    /********************* DO NO MODIFY ABOVE THIS LINE ***********************/
+    /**************************************************************************/
+    
+    /******* MAKE SURE TO ADD FUNCTIONS HERE THE SAME AS SWIFT CONTROLLER *****/
+    /**************************************************************************/
+    static FRENamedFunction extensionFunctions[] =
+    {
+        { (const uint8_t*) "init", (__bridge void *)@"init", &callSwiftFunction }
+        ,{ (const uint8_t*) "setProgress", (__bridge void *)@"setProgress", &callSwiftFunction }
+        ,{ (const uint8_t*) "setStyle", (__bridge void *)@"setStyle", &callSwiftFunction }
+    };
+    /**************************************************************************/
+    /**************************************************************************/
+    
     
     *numFunctionsToSet = sizeof(extensionFunctions) / sizeof(FRENamedFunction);
     *functionsToSet = extensionFunctions;
