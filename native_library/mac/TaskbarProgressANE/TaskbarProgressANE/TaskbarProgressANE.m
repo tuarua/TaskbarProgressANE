@@ -7,12 +7,10 @@
 //
 
 
-#import "TaskbarProgressANE_oc.h"
-
 #import <Foundation/Foundation.h>
 #include "TaskbarProgressANE_oc.h"
 #import "TaskbarProgressANE-Swift.h"
-#include <Adobe AIR/Adobe AIR.h>
+#import <FreSwift/FlashRuntimeExtensions.h>
 
 TaskbarProgressANE *swft; // our main Swift Controller
 NSArray * funcArray;

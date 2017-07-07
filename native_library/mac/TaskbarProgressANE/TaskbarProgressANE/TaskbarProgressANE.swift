@@ -13,8 +13,6 @@ import FreSwift
 @objc class TaskbarProgressANE: FreSwiftController {
     var progress:DockProgressBar!
     
-    // must have this function !!
-    // Must set const numFunctions in TaskbarProgressANE.m to the length of this Array
     func getFunctions() -> Array<String> {
         functionsToSet["init"] = initController
         functionsToSet["setProgress"] = setProgress
