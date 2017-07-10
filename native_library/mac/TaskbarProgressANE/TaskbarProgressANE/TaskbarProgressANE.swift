@@ -11,8 +11,12 @@ import Cocoa
 import FreSwift
 
 @objc class TaskbarProgressANE: FreSwiftController {
-    var progress:DockProgressBar!
+    private var context: FreContextSwift!
+    private func trace(_ value: Any...){
+        freTrace(ctx: context, value: value)
+    }
     
+    var progress:DockProgressBar!
     func getFunctions() -> Array<String> {
         functionsToSet["init"] = initController
         functionsToSet["setProgress"] = setProgress

@@ -22,19 +22,17 @@ FRE_FUNCTION(callSwiftFunction) {
 }
 
 
-void contextInitializer(void *extData, const uint8_t *ctxType, FREContext ctx, uint32_t *numFunctionsToSet,
+void TRTBP_contextInitializer(void *extData, const uint8_t *ctxType, FREContext ctx, uint32_t *numFunctionsToSet,
                         const FRENamedFunction **functionsToSet) {
     
     swft = [[TaskbarProgressANE alloc] init];
     [swft setFREContextWithCtx:ctx];
-    
     funcArray = [swft getFunctions];
-    /**************************************************************************/
-    /********************* DO NO MODIFY ABOVE THIS LINE ***********************/
-    /**************************************************************************/
     
+    /**************************************************************************/
     /******* MAKE SURE TO ADD FUNCTIONS HERE THE SAME AS SWIFT CONTROLLER *****/
     /**************************************************************************/
+    
     static FRENamedFunction extensionFunctions[] =
     {
         { (const uint8_t*) "init", (__bridge void *)@"init", &callSwiftFunction }
@@ -50,19 +48,19 @@ void contextInitializer(void *extData, const uint8_t *ctxType, FREContext ctx, u
     
 }
 
-void contextFinalizer(FREContext ctx) {
+void TRTBP_contextFinalizer(FREContext ctx) {
     return;
 }
 
 void TRTBPExtInizer(void **extData, FREContextInitializer *ctxInitializer, FREContextFinalizer *ctxFinalizer) {
-    *ctxInitializer = &contextInitializer;
-    *ctxFinalizer = &contextFinalizer;
+    *ctxInitializer = &TRTBP_contextInitializer;
+    *ctxFinalizer = &TRTBP_contextFinalizer;
 }
 
 void TRTBPExtFinizer(void *extData) {
     FREContext nullCTX;
     nullCTX = 0;
-    contextFinalizer(nullCTX);
+    TRTBP_contextFinalizer(nullCTX);
     return;
 }
 

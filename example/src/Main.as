@@ -53,6 +53,7 @@ public class Main extends Sprite {
 
     private function onExiting(event:Event):void {
         ane.dispose();
+        commonDependenciesANE.dispose();
     }
 }
 }
