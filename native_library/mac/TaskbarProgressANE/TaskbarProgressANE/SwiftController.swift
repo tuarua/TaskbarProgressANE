@@ -10,17 +10,17 @@ import Foundation
 import Cocoa
 import FreSwift
 
-@objc class TaskbarProgressANE: FreSwiftController {
+@objc class SwiftController: FreSwiftController {
     private var context: FreContextSwift!
     private func trace(_ value: Any...){
         freTrace(ctx: context, value: value)
     }
     
     var progress:DockProgressBar!
-    func getFunctions() -> Array<String> {
-        functionsToSet["init"] = initController
-        functionsToSet["setProgress"] = setProgress
-        functionsToSet["setStyle"] = setStyle
+    public func getFunctions(prefix: String) -> Array<String> {
+        functionsToSet["\(prefix)init"] = initController
+        functionsToSet["\(prefix)setProgress"] = setProgress
+        functionsToSet["\(prefix)setStyle"] = setStyle
         
         var arr: Array<String> = []
         for key in functionsToSet.keys {
@@ -76,7 +76,7 @@ import FreSwift
         }
     }
     
-    func setFREContext(ctx: FREContext) {
+    public func setFREContext(ctx: FREContext) {
         context = FreContextSwift.init(freContext: ctx)
     }
 }

@@ -14,10 +14,11 @@
 #define EXPORT __attribute__((visibility("default")))
 
 EXPORT
-void TRTBPExtInizer(void **extData, FREContextInitializer *ctxInitializer, FREContextFinalizer *ctxFinalizer);
+EXTENSION_FIN_DECL(TRTBP);
 
 EXPORT
-void TRTBPExtFinizer(void *extData);
+EXTENSION_INIT_DECL(TRTBP);
+
 #endif /* TaskbarProgressANE_oc_h */
 
 

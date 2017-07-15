@@ -1,66 +1,38 @@
 //
-//  TaskbarProgressANE.m
-//  TaskbarProgressANE
+// Created by User on 04/12/2016.
+// Copyright (c) 2017 Tua Rua Ltd. All rights reserved.
 //
-//  Created by Eoin Landy on 10/06/2017.
-//  Copyright © 2017 Tua Rua Ltd. All rights reserved.
-//
-
-
 #import <Foundation/Foundation.h>
+
+#import "FreMacros.h"
 #include "TaskbarProgressANE_oc.h"
+
 #import "TaskbarProgressANE-Swift.h"
-#import <FreSwift/FlashRuntimeExtensions.h>
+#include <Adobe AIR/Adobe AIR.h>
 
-TaskbarProgressANE *swft; // our main Swift Controller
-NSArray * funcArray;
-#define FRE_FUNCTION(fn) FREObject (fn)(FREContext context, void* functionData, uint32_t argc, FREObject argv[])
+SWIFT_DECL(TRTBP) // use unique prefix throughout to prevent clashes with other ANEs
 
-FRE_FUNCTION(callSwiftFunction) {
-    NSString* fName = (__bridge NSString *)(functionData);
-    return [swft callSwiftFunctionWithName:fName ctx:context argc:argc argv:argv];
-}
-
-
-void TRTBP_contextInitializer(void *extData, const uint8_t *ctxType, FREContext ctx, uint32_t *numFunctionsToSet,
-                        const FRENamedFunction **functionsToSet) {
-    
-    swft = [[TaskbarProgressANE alloc] init];
-    [swft setFREContextWithCtx:ctx];
-    funcArray = [swft getFunctions];
+CONTEXT_INIT(TRTBP) {
+    SWIFT_INITS(TRTBP)
     
     /**************************************************************************/
     /******* MAKE SURE TO ADD FUNCTIONS HERE THE SAME AS SWIFT CONTROLLER *****/
     /**************************************************************************/
-    
     static FRENamedFunction extensionFunctions[] =
     {
-        { (const uint8_t*) "init", (__bridge void *)@"init", &callSwiftFunction }
-        ,{ (const uint8_t*) "setProgress", (__bridge void *)@"setProgress", &callSwiftFunction }
-        ,{ (const uint8_t*) "setStyle", (__bridge void *)@"setStyle", &callSwiftFunction }
+        MAP_FUNCTION(TRTBP, init)
+        ,MAP_FUNCTION(TRTBP, setProgress)
+        ,MAP_FUNCTION(TRTBP, setStyle)
     };
     /**************************************************************************/
     /**************************************************************************/
     
-    
-    *numFunctionsToSet = sizeof(extensionFunctions) / sizeof(FRENamedFunction);
-    *functionsToSet = extensionFunctions;
+    SET_FUNCTIONS
     
 }
 
-void TRTBP_contextFinalizer(FREContext ctx) {
-    return;
+CONTEXT_FIN(TRTBP) {
+    //any clean up code here
 }
-
-void TRTBPExtInizer(void **extData, FREContextInitializer *ctxInitializer, FREContextFinalizer *ctxFinalizer) {
-    *ctxInitializer = &TRTBP_contextInitializer;
-    *ctxFinalizer = &TRTBP_contextFinalizer;
-}
-
-void TRTBPExtFinizer(void *extData) {
-    FREContext nullCTX;
-    nullCTX = 0;
-    TRTBP_contextFinalizer(nullCTX);
-    return;
-}
-
+EXTENSION_INIT(TRTBP)
+EXTENSION_FIN(TRTBP)
