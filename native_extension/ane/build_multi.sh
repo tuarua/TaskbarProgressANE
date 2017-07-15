@@ -43,7 +43,8 @@ unzip "$pathtome/$PROJECT_NAME.swc" "library.swf" -d "$pathtome"
 #Copy library.swf to folders.
 echo "Copying library.swf into place."
 cp "$pathtome/library.swf" "$pathtome/platforms/mac/release"
-cp "$pathtome/library.swf" "$pathtome/platforms/win/release"
+cp "$pathtome/library.swf" "$pathtome/platforms/win/x86/release"
+cp "$pathtome/library.swf" "$pathtome/platforms/win/x64/release"
 
 #Copy native libraries into place.
 echo "Copying native libraries into place."
@@ -61,8 +62,8 @@ echo "Building Release."
 -target ane "$pathtome/$PROJECT_NAME.ane" "$pathtome/extension_multi.xml" \
 -swc "$pathtome/$PROJECT_NAME.swc" \
 -platform MacOS-x86-64 -C "$pathtome/platforms/mac/release" "$PROJECT_NAME.framework" "library.swf" \
--platform Windows-x86 -C "$pathtome/platforms/win/release" "$PROJECT_NAME.dll" "library.swf"
-
+-platform Windows-x86 -C "$pathtome/platforms/win/x86/release" "$PROJECT_NAME.dll" "library.swf" \
+-platform Windows-x86-64 -C "$pathtome/platforms/win/x64/release" "$PROJECT_NAME.dll" "library.swf"
 
 
 #rm -r "$pathtome/platforms/mac"

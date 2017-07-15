@@ -18,13 +18,13 @@
                 <initializer>TRTBPExtInizer</initializer>
                 <finalizer>TRTBPExtFinizer</finalizer>
             </applicationDeployment>
-            <platform name="Windows-x86-64">
+        </platform>
+        <platform name="Windows-x86-64">
         <applicationDeployment>
             <nativeLibrary>TaskbarProgressANE.dll</nativeLibrary>
             <initializer>TRTBPExtInizer</initializer>
             <finalizer>TRTBPExtFinizer</finalizer>
         </applicationDeployment>
-    </platform>
         </platform>
     </platforms>
 </extension>
