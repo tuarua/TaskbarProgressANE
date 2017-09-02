@@ -10,11 +10,9 @@ import Foundation
 import Cocoa
 import FreSwift
 
-@objc class SwiftController: FreSwiftController {
-    private var context: FreContextSwift!
-    private func trace(_ value: Any...){
-        freTrace(ctx: context, value: value)
-    }
+@objc class SwiftController: NSObject, FreSwiftMainController {
+    internal var context: FreContextSwift!
+    var functionsToSet: FREFunctionMap = [:]
     
     var progress:DockProgressBar!
     public func getFunctions(prefix: String) -> Array<String> {
@@ -35,8 +33,9 @@ import FreSwift
             let inFRE0 = argv[0],
             let style = FreObjectSwift.init(freObject: inFRE0).value as? Int
             else {
-                traceError(message: "setProgress - incorrect arguments", line: #line, column: #column, file: #file, freError: nil)
-                return nil
+                return FreError(stackTrace: "",
+                                message: "initController - incorrect arguments",
+                                type: FreError.Code.invalidArgument).getError(#file, #line, #column)
         }
         progress = DockProgressBar.init(frame: NSMakeRect(0, 0, NSApp.dockTile.size.width, 12), style: style)
         return nil
@@ -47,8 +46,9 @@ import FreSwift
             let inFRE0 = argv[0],
             let val = FreObjectSwift.init(freObject: inFRE0).value as? Int
             else {
-                traceError(message: "setProgress - incorrect arguments", line: #line, column: #column, file: #file, freError: nil)
-                return nil
+                return FreError(stackTrace: "",
+                                message: "setProgress - incorrect arguments",
+                                type: FreError.Code.invalidArgument).getError(#file, #line, #column)
         }
         
         let asDouble = Double.init(val)
@@ -61,22 +61,23 @@ import FreSwift
             let inFRE0 = argv[0],
             let style = FreObjectSwift.init(freObject: inFRE0).value as? Int
             else {
-                traceError(message: "setProgress - incorrect arguments", line: #line, column: #column, file: #file, freError: nil)
-                return nil
+                return FreError(stackTrace: "",
+                                message: "setStyle - incorrect arguments",
+                                type: FreError.Code.invalidArgument).getError(#file, #line, #column)
         }
         progress.setStyle(style: style)
         return nil
     }
     
-    private func traceError(message: String, line: Int, column: Int, file: String, freError: FreError?) {
-        trace("ERROR:", "message:", message, "file:", "[\(file):\(line):\(column)]")
-        if let freError = freError {
-            trace(freError.type)
-            trace(freError.stackTrace)
+    // Must have this function. It exposes the methods to our entry ObjC.
+    func callSwiftFunction(name: String, ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
+        if let fm = functionsToSet[name] {
+            return fm(ctx, argc, argv)
         }
+        return nil
     }
     
-    public func setFREContext(ctx: FREContext) {
-        context = FreContextSwift.init(freContext: ctx)
+    func setFREContext(ctx: FREContext) {
+        self.context = FreContextSwift.init(freContext: ctx)
     }
 }
