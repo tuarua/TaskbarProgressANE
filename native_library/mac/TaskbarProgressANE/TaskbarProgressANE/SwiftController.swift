@@ -11,6 +11,8 @@ import Cocoa
 import FreSwift
 
 @objc class SwiftController: NSObject, FreSwiftMainController {
+    public var TAG: String? = "TaskbarProgressOSXANE"
+
     internal var context: FreContextSwift!
     var functionsToSet: FREFunctionMap = [:]
     
@@ -30,12 +32,9 @@ import FreSwift
 
     func initController(ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
         guard argc > 0,
-            let inFRE0 = argv[0],
-            let style = FreObjectSwift.init(freObject: inFRE0).value as? Int
+            let style = Int(argv[0])
             else {
-                return FreError(stackTrace: "",
-                                message: "initController - incorrect arguments",
-                                type: FreError.Code.invalidArgument).getError(#file, #line, #column)
+                return ArgCountError(message: "initController").getError(#file, #line, #column)
         }
         progress = DockProgressBar.init(frame: NSMakeRect(0, 0, NSApp.dockTile.size.width, 12), style: style)
         return nil
@@ -43,12 +42,9 @@ import FreSwift
     
     func setProgress(ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
         guard argc > 0,
-            let inFRE0 = argv[0],
-            let val = FreObjectSwift.init(freObject: inFRE0).value as? Int
+            let val = Int(argv[0])
             else {
-                return FreError(stackTrace: "",
-                                message: "setProgress - incorrect arguments",
-                                type: FreError.Code.invalidArgument).getError(#file, #line, #column)
+                return ArgCountError(message: "setProgress").getError(#file, #line, #column)
         }
         
         let asDouble = Double.init(val)
@@ -58,12 +54,9 @@ import FreSwift
     
     func setStyle(ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
         guard argc > 0,
-            let inFRE0 = argv[0],
-            let style = FreObjectSwift.init(freObject: inFRE0).value as? Int
+            let style = Int(argv[0])
             else {
-                return FreError(stackTrace: "",
-                                message: "setStyle - incorrect arguments",
-                                type: FreError.Code.invalidArgument).getError(#file, #line, #column)
+                return ArgCountError(message: "setStyle").getError(#file, #line, #column)
         }
         progress.setStyle(style: style)
         return nil
