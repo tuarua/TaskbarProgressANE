@@ -1,3 +1,6 @@
+### 0.0.5
+- FreSwift 1.2
+
 ### 0.0.4
 - WIN 64bit support added
 
