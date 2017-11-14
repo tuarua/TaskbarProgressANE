@@ -10,14 +10,14 @@ import Foundation
 import Cocoa
 import FreSwift
 
-@objc class SwiftController: NSObject, FreSwiftMainController {
+public class SwiftController: NSObject, FreSwiftMainController {
     public var TAG: String? = "TaskbarProgressOSXANE"
 
-    internal var context: FreContextSwift!
-    var functionsToSet: FREFunctionMap = [:]
+    public var context: FreContextSwift!
+    public var functionsToSet: FREFunctionMap = [:]
     
     var progress:DockProgressBar!
-    public func getFunctions(prefix: String) -> Array<String> {
+    @objc public func getFunctions(prefix: String) -> Array<String> {
         functionsToSet["\(prefix)init"] = initController
         functionsToSet["\(prefix)setProgress"] = setProgress
         functionsToSet["\(prefix)setStyle"] = setStyle
@@ -63,14 +63,18 @@ import FreSwift
     }
     
     // Must have this function. It exposes the methods to our entry ObjC.
-    func callSwiftFunction(name: String, ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
+    @objc public func callSwiftFunction(name: String, ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
         if let fm = functionsToSet[name] {
             return fm(ctx, argc, argv)
         }
         return nil
     }
     
-    func setFREContext(ctx: FREContext) {
+    @objc public func setFREContext(ctx: FREContext) {
         self.context = FreContextSwift.init(freContext: ctx)
+    }
+    
+    @objc public func onLoad() {
+    
     }
 }
