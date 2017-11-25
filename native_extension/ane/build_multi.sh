@@ -22,15 +22,17 @@ if [ -d "$pathtome/platforms/mac" ]; then
 rm -r "$pathtome/platforms/mac"
 fi
 
-if [ ! -d "$pathtome/platforms/mac" ]; then
-mkdir "$pathtome/platforms/mac"
-mkdir "$pathtome/platforms/mac/release"
+if [ -d "$pathtome/platforms/win" ]; then
+rm -r "$pathtome/platforms/win"
 fi
 
-if [ ! -d "$pathtome/platforms/win" ]; then
+mkdir "$pathtome/platforms/mac"
+mkdir "$pathtome/platforms/mac/release"
 mkdir "$pathtome/platforms/win"
-mkdir "$pathtome/platforms/win/release"
-fi
+mkdir "$pathtome/platforms/win/x86"
+mkdir "$pathtome/platforms/win/x64"
+mkdir "$pathtome/platforms/win/x86/release"
+mkdir "$pathtome/platforms/win/x64/release"
 
 #Copy SWC into place.
 echo "Copying SWC into place."
