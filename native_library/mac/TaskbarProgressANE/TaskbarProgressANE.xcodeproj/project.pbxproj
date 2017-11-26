@@ -14,10 +14,8 @@
 		CE9ACAA51EEC681A007F0BBE /* Adobe AIR in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9ACAA41EEC681A007F0BBE /* Adobe AIR */; };
 		CE9ACAAF1EEC68E7007F0BBE /* TaskbarProgressANE_oc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9ACAAE1EEC68E7007F0BBE /* TaskbarProgressANE_oc.h */; };
 		CE9ACAB11EEC69E7007F0BBE /* TaskbarProgressANE.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9ACAB01EEC69E7007F0BBE /* TaskbarProgressANE.m */; };
-		CE9ACAB51EEC6FBF007F0BBE /* TaskbarProgressANE-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9ACAB41EEC6FBF007F0BBE /* TaskbarProgressANE-Bridging-Header.h */; };
 		CE9ACAB71EEC6FF7007F0BBE /* SwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ACAB61EEC6FF7007F0BBE /* SwiftController.swift */; };
 		CE9ACABA1EEC85AF007F0BBE /* DockProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9ACAB91EEC85AF007F0BBE /* DockProgressBar.swift */; };
-		CEE376231F0ED6BF007069B0 /* TaskbarProgressANE-Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9ACAB21EEC6F39007F0BBE /* TaskbarProgressANE-Swift.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +24,10 @@
 		CE9ACA941EEC6609007F0BBE /* TaskbarProgressANE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaskbarProgressANE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9ACA981EEC6609007F0BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = TaskbarProgressANE/Info.plist; sourceTree = "<group>"; };
 		CE9ACAA01EEC67B9007F0BBE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		CE9ACAA21EEC6814007F0BBE /* Adobe AIR_64 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "Adobe AIR_64"; path = "/Users/User/sdks/AIR/AIRSDK_26/runtimes/air-captive/mac/Adobe AIR.framework/Versions/1.0/Adobe AIR_64"; sourceTree = "<absolute>"; };
-		CE9ACAA41EEC681A007F0BBE /* Adobe AIR */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "Adobe AIR"; path = "/Users/User/sdks/AIR/AIRSDK_26/runtimes/air-captive/mac/Adobe AIR.framework/Versions/1.0/Adobe AIR"; sourceTree = "<absolute>"; };
+		CE9ACAA21EEC6814007F0BBE /* Adobe AIR_64 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "Adobe AIR_64"; path = "/Users/User/sdks/AIR/AIRSDK_27/runtimes/air-captive/mac/Adobe AIR.framework/Versions/1.0/Adobe AIR_64"; sourceTree = "<absolute>"; };
+		CE9ACAA41EEC681A007F0BBE /* Adobe AIR */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "Adobe AIR"; path = "/Users/User/sdks/AIR/AIRSDK_27/runtimes/air-captive/mac/Adobe AIR.framework/Versions/1.0/Adobe AIR"; sourceTree = "<absolute>"; };
 		CE9ACAAE1EEC68E7007F0BBE /* TaskbarProgressANE_oc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskbarProgressANE_oc.h; sourceTree = "<group>"; };
 		CE9ACAB01EEC69E7007F0BBE /* TaskbarProgressANE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskbarProgressANE.m; sourceTree = "<group>"; };
-		CE9ACAB21EEC6F39007F0BBE /* TaskbarProgressANE-Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TaskbarProgressANE-Swift.h"; sourceTree = "<group>"; };
-		CE9ACAB41EEC6FBF007F0BBE /* TaskbarProgressANE-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TaskbarProgressANE-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE9ACAB61EEC6FF7007F0BBE /* SwiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftController.swift; sourceTree = "<group>"; };
 		CE9ACAB91EEC85AF007F0BBE /* DockProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,10 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9ACAA11EEC67B9007F0BBE /* Cocoa.framework in Frameworks */,
 				CE05BF0D1F657B6C0019899B /* FreSwift.framework in Frameworks */,
 				CE9ACAA51EEC681A007F0BBE /* Adobe AIR in Frameworks */,
 				CE9ACAA31EEC6814007F0BBE /* Adobe AIR_64 in Frameworks */,
-				CE9ACAA11EEC67B9007F0BBE /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +101,6 @@
 			children = (
 				CE05BF0A1F657B2F0019899B /* FreMacros.h */,
 				CE9ACAAE1EEC68E7007F0BBE /* TaskbarProgressANE_oc.h */,
-				CE9ACAB21EEC6F39007F0BBE /* TaskbarProgressANE-Swift.h */,
-				CE9ACAB41EEC6FBF007F0BBE /* TaskbarProgressANE-Bridging-Header.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -119,8 +113,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9ACAAF1EEC68E7007F0BBE /* TaskbarProgressANE_oc.h in Headers */,
-				CE9ACAB51EEC6FBF007F0BBE /* TaskbarProgressANE-Bridging-Header.h in Headers */,
-				CEE376231F0ED6BF007069B0 /* TaskbarProgressANE-Swift.h in Headers */,
 				CE05BF0B1F657B2F0019899B /* FreMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,12 +145,12 @@
 		CE9ACA8B1EEC6609007F0BBE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Tua Rua Ltd";
 				TargetAttributes = {
 					CE9ACA931EEC6609007F0BBE = {
 						CreatedOnToolsVersion = 8.3;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -230,7 +222,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -238,7 +232,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -282,7 +280,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -290,7 +290,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -312,6 +316,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "TaskbarProgressANE-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -348,9 +353,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "TaskbarProgressANE/TaskbarProgressANE-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -385,8 +391,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "TaskbarProgressANE/TaskbarProgressANE-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

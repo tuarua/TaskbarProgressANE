@@ -5,17 +5,14 @@
       <configuration name="Main" target-platform="Desktop" pure-as="true" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/bin-debug">
         <dependencies>
           <entries>
-            <entry library-id="bb50824d-75c5-4f27-88ea-6998b7c28646">
+            <entry library-name="CommonDependencies" library-level="project">
               <dependency linkage="Merged" />
             </entry>
             <entry library-name="TaskbarProgressANE" library-level="project">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-name="CommonDependencies" library-level="project">
-              <dependency linkage="Merged" />
-            </entry>
           </entries>
-          <sdk name="AIRSDK_26" />
+          <sdk name="AIRSDK_27" />
         </dependencies>
         <compiler-options>
           <map>
@@ -41,18 +38,8 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="AIRSDK_26" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="jdk" jdkName="AIRSDK_27" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
-      <library type="flex">
-        <properties id="bb50824d-75c5-4f27-88ea-6998b7c28646" />
-        <CLASSES>
-          <root url="jar://$DOCUMENTS$/TaskbarProgressANE/native_extension/ane/TaskbarProgressANE.ane!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="library" exported="" name="TaskbarProgressANE" level="project" />
     <orderEntry type="library" exported="" name="CommonDependencies" level="project" />
   </component>

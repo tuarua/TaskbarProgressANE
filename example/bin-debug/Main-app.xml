@@ -1,4 +1,4 @@
-<application xmlns="http://ns.adobe.com/air/application/26.0">
+<application xmlns="http://ns.adobe.com/air/application/27.0">
   <!-- Adobe AIR Application Descriptor File Template.
 
 	Specifies parameters for identifying, installing, and launching AIR applications.
@@ -235,7 +235,7 @@
   <!-- </android> -->
   <!-- End of the schema for adding the android specific tags in AndroidManifest.xml file -->
   <extensions>
-    <extensionID>com.tuarua.TaskbarProgressANE</extensionID>
     <extensionID>com.tuarua.CommonDependencies</extensionID>
+    <extensionID>com.tuarua.TaskbarProgressANE</extensionID>
   </extensions>
 </application>
