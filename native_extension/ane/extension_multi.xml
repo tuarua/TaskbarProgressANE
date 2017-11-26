@@ -2,8 +2,8 @@
 <extension xmlns="http://ns.adobe.com/air/extension/19.0">
     <id>com.tuarua.TaskbarProgressANE</id>
     <name>Taskbar Progress ANE</name>
-    <copyright>This work is licensed under The MIT License (MIT), Copyright 2016 Tua Rua Ltd.</copyright>
-    <versionNumber>0.0.5</versionNumber>
+    <copyright>This work is licensed under Apache License, Copyright (c) 2017 Tua Rua Ltd.</copyright>
+    <versionNumber>1.0.0</versionNumber>
     <platforms>
         <platform name="MacOS-x86-64">
             <applicationDeployment>

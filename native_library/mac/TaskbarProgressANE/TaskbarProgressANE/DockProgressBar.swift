@@ -19,7 +19,7 @@ class DockProgressBar : NSProgressIndicator {
         case paused = 0x8
     }
 
-    private var _barStyle: Style = Style.normal;
+    private var _barStyle = Style.normal;
     
     convenience init(frame frameRect: NSRect, style:Int) {
         self.init(frame: frameRect)
@@ -28,7 +28,7 @@ class DockProgressBar : NSProgressIndicator {
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
-        self.style = NSProgressIndicatorStyle.barStyle
+        self.style = NSProgressIndicator.Style.bar
         self.isIndeterminate = false
         self.isBezeled = false
         self.minValue = 0
@@ -76,13 +76,13 @@ class DockProgressBar : NSProgressIndicator {
             break
         }
         
-        NSRectFill(rectToDraw)
+        rectToDraw.fill()
     }
     
     private func addProgress() {
         if NSApp.dockTile.contentView == nil {
             let imageView = NSImageView()
-            imageView.image = NSApplication.shared().applicationIconImage
+            imageView.image = NSApplication.shared.applicationIconImage
             NSApp.dockTile.contentView = imageView
             imageView.addSubview(self)
         }
