@@ -63,7 +63,7 @@ extern "C" {
 		EnumWindows(EnumProc, processID);
 
 		static FRENamedFunction extensionFunctions[] = {
-			{reinterpret_cast<const uint8_t *>("init"), nullptr, &init}
+			 {reinterpret_cast<const uint8_t *>("init"), nullptr, &init}
 			,{reinterpret_cast<const uint8_t *>("setProgress"), nullptr, &setProgress}
 			,{ reinterpret_cast<const uint8_t *>("setStyle"), nullptr, &setStyle }
 		};
