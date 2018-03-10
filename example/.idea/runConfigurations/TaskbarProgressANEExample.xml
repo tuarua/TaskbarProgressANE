@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Main (TaskbarProgressANEExample)" type="FlashRunConfigurationType" factoryName="Flash App">
+  <configuration default="false" name="TaskbarProgressANEExample" type="FlashRunConfigurationType" factoryName="Flash App">
     <option name="BCName" value="Main" />
     <option name="IOSSimulatorSdkPath" value="" />
     <option name="adlOptions" value="" />
@@ -18,7 +18,7 @@
         <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
         <option name="launcherType" value="OSDefault" />
         <option name="newPlayerInstance" value="false" />
-        <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        <option name="playerPath" value="FlashPlayerDebugger.exe" />
       </LauncherParameters>
     </option>
     <option name="mobileRunTarget" value="Emulator" />

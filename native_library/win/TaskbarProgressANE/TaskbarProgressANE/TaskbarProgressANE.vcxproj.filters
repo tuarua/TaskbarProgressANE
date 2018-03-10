@@ -26,13 +26,13 @@
     <ClInclude Include="..\..\..\include\TaskbarProgressANE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\sdks\AIR\4.6.0_25\include\FlashRuntimeExtensions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\include\Win7TaskbarProgress.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\include\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\sdks\AIR\AIRSDK_29\include\FlashRuntimeExtensions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
