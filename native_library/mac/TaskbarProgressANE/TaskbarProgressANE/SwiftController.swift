@@ -22,27 +22,26 @@ public class SwiftController: NSObject, FreSwiftMainController {
     public var context: FreContextSwift!
     public var functionsToSet: FREFunctionMap = [:]
     
-    var progress:DockProgressBar!
-    @objc public func getFunctions(prefix: String) -> Array<String> {
+    var progress: DockProgressBar!
+    @objc public func getFunctions(prefix: String) -> [String] {
         functionsToSet["\(prefix)init"] = initController
         functionsToSet["\(prefix)setProgress"] = setProgress
         functionsToSet["\(prefix)setStyle"] = setStyle
         
-        var arr: Array<String> = []
+        var arr: [String] = []
         for key in functionsToSet.keys {
             arr.append(key)
         }
         return arr
     }
     
-
     func initController(ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
         guard argc > 0,
             let style = Int(argv[0])
             else {
                 return ArgCountError(message: "initController").getError(#file, #line, #column)
         }
-        progress = DockProgressBar.init(frame: NSMakeRect(0, 0, NSApp.dockTile.size.width, 12), style: style)
+        progress = DockProgressBar.init(frame: NSRect.init(x: 0, y: 0, width: NSApp.dockTile.size.width, height: 12), style: style)
         return nil
     }
     

@@ -9,7 +9,7 @@
 import Foundation
 import Cocoa
 
-class DockProgressBar : NSProgressIndicator {
+class DockProgressBar: NSProgressIndicator {
     
     public enum Style: Int {
         case noProgress = 0
@@ -19,9 +19,9 @@ class DockProgressBar : NSProgressIndicator {
         case paused = 0x8
     }
 
-    private var _barStyle = Style.normal;
+    private var _barStyle = Style.normal
     
-    convenience init(frame frameRect: NSRect, style:Int) {
+    convenience init(frame frameRect: NSRect, style: Int) {
         self.init(frame: frameRect)
         self._barStyle = Style(rawValue: style)!
     }
@@ -44,7 +44,7 @@ class DockProgressBar : NSProgressIndicator {
     override func draw(_ dirtyRect: NSRect) {
         
         // Outline
-        let rect = NSInsetRect(self.bounds, 1.0, 1.0)
+        let rect = self.bounds.insetBy(dx: 1.0, dy: 1.0)
         let radius = rect.size.height / 2
         let bezierPath = NSBezierPath(roundedRect: rect, xRadius: radius, yRadius: radius)
         bezierPath.lineWidth = 2.0
@@ -52,7 +52,7 @@ class DockProgressBar : NSProgressIndicator {
         bezierPath.stroke()
         
         // inside
-        let insideRect = NSInsetRect(rect, 2.0, 2.0)
+        let insideRect = rect.insetBy(dx: 2.0, dy: 2.0)
         let insideRadius = insideRect.size.height / 2
         let insideBezierpath = NSBezierPath(roundedRect: insideRect, xRadius: insideRadius, yRadius: insideRadius)
         insideBezierpath.lineWidth = 1.0
@@ -64,16 +64,12 @@ class DockProgressBar : NSProgressIndicator {
         switch _barStyle {
         case .error:
             NSColor.red.set()
-            break
         case .indeterminate, .normal:
             NSColor(red: 0.2, green: 0.6, blue: 1.0, alpha: 1.0).set()
-            break
         case .noProgress:
             NSColor(red: 0.2, green: 0.6, blue: 1.0, alpha: 0.0).set()
-            break
         case .paused:
             NSColor.yellow.set()
-            break
         }
         
         rectToDraw.fill()
