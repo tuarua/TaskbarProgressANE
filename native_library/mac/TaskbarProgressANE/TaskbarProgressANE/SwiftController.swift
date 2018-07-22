@@ -39,7 +39,7 @@ public class SwiftController: NSObject, FreSwiftMainController {
         guard argc > 0,
             let style = Int(argv[0])
             else {
-                return ArgCountError(message: "initController").getError(#file, #line, #column)
+                return FreArgError(message: "initController").getError(#file, #line, #column)
         }
         progress = DockProgressBar.init(frame: NSRect.init(x: 0, y: 0, width: NSApp.dockTile.size.width, height: 12), style: style)
         return nil
@@ -49,7 +49,7 @@ public class SwiftController: NSObject, FreSwiftMainController {
         guard argc > 0,
             let val = Int(argv[0])
             else {
-                return ArgCountError(message: "setProgress").getError(#file, #line, #column)
+                return FreArgError(message: "setProgress").getError(#file, #line, #column)
         }
         
         let asDouble = Double(val)
@@ -61,7 +61,7 @@ public class SwiftController: NSObject, FreSwiftMainController {
         guard argc > 0,
             let style = Int(argv[0])
             else {
-                return ArgCountError(message: "setStyle").getError(#file, #line, #column)
+                return FreArgError(message: "setStyle").getError(#file, #line, #column)
         }
         progress.setStyle(style: style)
         return nil
