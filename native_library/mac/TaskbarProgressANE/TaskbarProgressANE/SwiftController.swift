@@ -17,7 +17,7 @@ import Cocoa
 import FreSwift
 
 public class SwiftController: NSObject, FreSwiftMainController {
-    public var TAG: String? = "TaskbarProgressOSXANE"
+    public static var TAG = "TaskbarProgressOSXANE"
 
     public var context: FreContextSwift!
     public var functionsToSet: FREFunctionMap = [:]

@@ -31,6 +31,7 @@
         </excludedEntries>
       </libraryPathEntry>
       <libraryPathEntry kind="5" linkType="2" path="${DOCUMENTS}/TaskbarProgressANE/native_extension/ane/TaskbarProgressANE.ane"/>
+      <libraryPathEntry kind="5" linkType="2" path="${DOCUMENTS}/TaskbarProgressANE/native_extension/ane/FreSwift.ane"/>
     </libraryPath>
     <sourceAttachmentPath/>
   </compiler>
@@ -49,6 +50,7 @@
         <airExcludes/>
         <anePaths>
           <anePathEntry path="${DOCUMENTS}/TaskbarProgressANE/native_extension/ane/TaskbarProgressANE.ane"/>
+          <anePathEntry path="${DOCUMENTS}/TaskbarProgressANE/native_extension/ane/FreSwift.ane"/>
         </anePaths>
       </airSettings>
       <actionScriptSettings version="1"/>
