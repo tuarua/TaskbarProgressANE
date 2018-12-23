@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/30.0">
+<application xmlns="http://ns.adobe.com/air/application/32.0">
 	<id>TaskbarProgressANEExample</id>
 	<filename>Main</filename>
 	<name>Main</name>
@@ -26,7 +26,7 @@
 	</icon>
 
 <extensions>
-		<extensionID>com.tuarua.CommonDependencies</extensionID>
+		<extensionID>com.tuarua.FreSwift</extensionID>
         <extensionID>com.tuarua.TaskbarProgressANE</extensionID>
     </extensions>
 </application>

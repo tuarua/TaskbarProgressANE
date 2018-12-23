@@ -1,6 +1,6 @@
 package {
 
-import com.tuarua.CommonDependencies;
+import com.tuarua.FreSwift;
 import com.tuarua.TaskbarProgressANE;
 
 import flash.desktop.NativeApplication;
@@ -12,7 +12,7 @@ import flash.text.TextField;
 import flash.utils.Timer;
 
 public class Main extends Sprite {
-    private var commonDependenciesANE:CommonDependencies = new CommonDependencies();
+    private var freSwiftANE:FreSwift = new FreSwift();
     private var hasActivated:Boolean;
     private var ane:TaskbarProgressANE;
     private var textField:TextField = new TextField();
@@ -53,7 +53,7 @@ public class Main extends Sprite {
 
     private function onExiting(event:Event):void {
         ane.dispose();
-        commonDependenciesANE.dispose();
+        freSwiftANE.dispose();
     }
 }
 }
