@@ -41,11 +41,11 @@ public class TaskbarProgressANE extends EventDispatcher {
         ctx.call("init", style);
     }
 
-    public function setStyle(value:int):void {
+    public function set style(value:int):void {
         ctx.call("setStyle", value);
     }
 
-    public function setProgress(value:Number):void {
+    public function set progress(value:Number):void {
         ctx.call("setProgress", Math.round(value * 100));
     }
 

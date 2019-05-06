@@ -42,11 +42,11 @@ public class Main extends Sprite {
         if (timer.currentCount > 55) {
             timer.reset();
             timer.stop();
-            ane.setStyle(TaskbarProgressANE.STYLE_PAUSED);
+            ane.style = TaskbarProgressANE.STYLE_PAUSED;
             return;
         }
 
-        ane.setProgress(timer.currentCount / 100);
+        ane.progress = timer.currentCount / 100;
         textField.text = timer.currentCount + "%";
 
     }

@@ -41,7 +41,7 @@ public class SwiftController: NSObject, FreSwiftMainController {
             else {
                 return FreArgError(message: "initController").getError(#file, #line, #column)
         }
-        progress = DockProgressBar.init(frame: NSRect.init(x: 0, y: 0, width: NSApp.dockTile.size.width, height: 12), style: style)
+        progress = DockProgressBar(frame: NSRect(x: 0, y: 0, width: NSApp.dockTile.size.width, height: 12), style: style)
         return nil
     }
     
@@ -76,7 +76,7 @@ public class SwiftController: NSObject, FreSwiftMainController {
     }
     
     @objc public func setFREContext(ctx: FREContext) {
-        self.context = FreContextSwift.init(freContext: ctx)
+        self.context = FreContextSwift(freContext: ctx)
     }
     
     @objc public func onLoad() {
