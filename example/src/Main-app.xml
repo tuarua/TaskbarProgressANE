@@ -10,9 +10,12 @@
 		<content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
 
 
-	<autoOrients>false</autoOrients>
+		<autoOrients>false</autoOrients>
         <fullScreen>false</fullScreen>
         <visible>true</visible>
+		<depthAndStencil>true</depthAndStencil>
+		<renderMode>direct</renderMode>
+		<requestedDisplayResolution>high</requestedDisplayResolution>
     </initialWindow>
 
 

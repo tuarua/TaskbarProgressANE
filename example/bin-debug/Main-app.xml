@@ -8,6 +8,9 @@
     <autoOrients>false</autoOrients>
     <fullScreen>false</fullScreen>
     <visible>true</visible>
+    <depthAndStencil>true</depthAndStencil>
+    <renderMode>direct</renderMode>
+    <requestedDisplayResolution>high</requestedDisplayResolution>
   </initialWindow>
   <supportedProfiles>extendedDesktop</supportedProfiles>
   <icon>
