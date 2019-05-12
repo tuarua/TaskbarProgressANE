@@ -11,6 +11,9 @@
             <entry library-name="FreSwift" library-level="project">
               <dependency linkage="Merged" />
             </entry>
+            <entry library-name="FiraSansSemiBold" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
           </entries>
           <sdk name="AIRSDK_32" />
         </dependencies>
@@ -43,5 +46,6 @@
     <orderEntry type="library" exported="" name="TaskbarProgressANE" level="project" />
     <orderEntry type="library" exported="" name="CommonDependencies" level="project" />
     <orderEntry type="library" exported="" name="FreSwift" level="project" />
+    <orderEntry type="library" exported="" name="FiraSansSemiBold" level="project" />
   </component>
 </module>

@@ -3,18 +3,18 @@
 ||Normal|Error|Paused |
 |---|---|---|---|
 |Windows|  ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-normal.png) | ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-error.png)  | ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-paused.png)  |
-|OSX|  ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-normal-osx.png) | ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-error-osx.png)  | ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-paused-osx.png)  |
+|macOS|  ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-normal-osx.png) | ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-error-osx.png)  | ![alt tag](https://raw.githubusercontent.com/tuarua/TaskbarProgressANE/master/screenshots/capture-paused-osx.png)  |
 
 ##### Dependencies
 From the command line cd into /example and run:
-- OSX
-````shell
+- macOS
+```shell
 bash get_dependencies.sh
-`````
+```
 - Windows Powershell
-````shell
-PS get_dependencies.ps1
-`````
+```shell
+get_dependencies.ps1
+```
 
 ### Windows Installation - Important!
 
