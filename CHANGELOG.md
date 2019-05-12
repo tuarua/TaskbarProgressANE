@@ -1,3 +1,6 @@
+### 1.9.0
+- Rename main class to `TaskbarProgress` and use all static methods
+
 ### 1.8.0
 - Use setters instead
 
