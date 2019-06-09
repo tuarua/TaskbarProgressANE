@@ -1,3 +1,7 @@
+### 2.0.0
+- WIN Convert to C#
+- WIN add FreSharp as a dependency
+
 ### 1.9.0
 - Rename main class to `TaskbarProgress` and use all static methods
 

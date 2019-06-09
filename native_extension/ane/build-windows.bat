@@ -45,11 +45,14 @@ echo Copying native libraries into place.
 copy %pathtome%..\..\native_library\win\%projectName%\x86\Release\%projectName%.dll %pathtome%platforms\win\x86\release
 copy %pathtome%..\..\native_library\win\%projectName%\x64\Release\%projectName%.dll %pathtome%platforms\win\x64\release
 
+copy %pathtome%..\..\native_library\win\%projectName%\x86\Release\%projectName%Lib.dll %pathtome%platforms\win\x86\release
+copy %pathtome%..\..\native_library\win\%projectName%\x64\Release\%projectName%Lib.dll %pathtome%platforms\win\x64\release
+
 REM Run the build command.
 echo Building Release.
-call %ADT% -package -target ane %pathtome%%projectName%.ane %pathtome%extension_win.xml -swc %pathtome%%projectName%.swc ^
--platform Windows-x86 -C %pathtome%platforms\win\x86\release %projectName%.dll library.swf ^
--platform Windows-x86-64 -C %pathtome%platforms\win\x64\release %projectName%.dll library.swf
+call %AIR_PATH%adt.bat -package -target ane %pathtome%%projectName%.ane %pathtome%extension_win.xml -swc %pathtome%%projectName%.swc ^
+-platform Windows-x86 -C %pathtome%platforms\win\x86\release %projectName%.dll %projectName%Lib.dll library.swf ^
+-platform Windows-x86-64 -C %pathtome%platforms\win\x64\release %projectName%.dll %projectName%Lib.dll library.swf
 
 call DEL /F /Q /A %pathtome%%projectName%.swc
 call DEL /F /Q /A %pathtome%library.swf
