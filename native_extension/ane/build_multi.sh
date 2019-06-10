@@ -6,7 +6,7 @@ pathtome=$0
 pathtome="${pathtome%/*}"
 echo $pathtome
 
-PROJECT_NAME=TaskbarProgressANE
+PROJECTNAME=TaskbarProgressANE
 
 AIR_SDK="/Users/eoinlandy/SDKs/AIRSDK_32"
 echo $AIR_SDK
@@ -34,11 +34,11 @@ fi
 
 #Copy SWC into place.
 echo "Copying SWC into place."
-cp "$pathtome/../bin/$PROJECT_NAME.swc" "$pathtome/"
+cp "$pathtome/../bin/$PROJECTNAME.swc" "$pathtome/"
 
 #Extract contents of SWC.
 echo "Extracting files form SWC."
-unzip "$pathtome/$PROJECT_NAME.swc" "library.swf" -d "$pathtome"
+unzip "$pathtome/$PROJECTNAME.swc" "library.swf" -d "$pathtome"
 
 #Copy library.swf to folders.
 echo "Copying library.swf into place."
@@ -51,20 +51,20 @@ echo "Copying native libraries into place."
 
 #Copy native libraries into place.
 echo "Copying native libraries into place."
-cp -R -L "$pathtome/../../native_library/mac/$PROJECT_NAME/Build/Products/Release/$PROJECT_NAME.framework" "$pathtome/platforms/mac/release"
-rm -r "$pathtome/platforms/mac/release/$PROJECT_NAME.framework/Versions"
+cp -R -L "$pathtome/../../native_library/mac/$PROJECTNAME/Build/Products/Release/$PROJECTNAME.framework" "$pathtome/platforms/mac/release"
+rm -r "$pathtome/platforms/mac/release/$PROJECTNAME.framework/Versions"
 
 
 #Run the build command.
 echo "Building Release."
 "$AIR_SDK"/bin/adt -package \
--target ane "$pathtome/$PROJECT_NAME.ane" "$pathtome/extension_multi.xml" \
--swc "$pathtome/$PROJECT_NAME.swc" \
--platform MacOS-x86-64 -C "$pathtome/platforms/mac/release" "$PROJECT_NAME.framework" "library.swf" \
--platform Windows-x86 -C "$pathtome/platforms/win/x86/release" "$PROJECT_NAME.dll" "library.swf" \
--platform Windows-x86-64 -C "$pathtome/platforms/win/x64/release" "$PROJECT_NAME.dll" "library.swf"
+-target ane "$pathtome/$PROJECTNAME.ane" "$pathtome/extension_multi.xml" \
+-swc "$pathtome/$PROJECTNAME.swc" \
+-platform MacOS-x86-64 -C "$pathtome/platforms/mac/release" $PROJECTNAME.framework library.swf \
+-platform Windows-x86 -C "$pathtome/platforms/win/x86/release" ${PROJECTNAME}.dll ${PROJECTNAME}Lib.dll library.swf \
+-platform Windows-x86-64 -C "$pathtome/platforms/win/x64/release" ${PROJECTNAME}.dll ${PROJECTNAME}Lib.dll library.swf 
 
 
 #rm -r "$pathtome/platforms/mac"
-rm "$pathtome/$PROJECT_NAME.swc"
+rm "$pathtome/$PROJECTNAME.swc"
 rm "$pathtome/library.swf"

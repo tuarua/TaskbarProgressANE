@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <application xmlns="http://ns.adobe.com/air/application/32.0">
-	<id>TaskbarProgressANEExample</id>
-	<filename>Main</filename>
-	<name>Main</name>
-	<versionNumber>0.0.0</versionNumber>
-	<initialWindow>
-		<!-- The main SWF or HTML file of the application. Required. -->
-		<!-- Note: In Flash Builder, the SWF reference is set automatically. -->
-		<content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
+    <id>TaskbarProgressANEExample</id>
+    <filename>Main</filename>
+    <name>Main</name>
+    <versionNumber>0.0.0</versionNumber>
+    <initialWindow>
+        <!-- The main SWF or HTML file of the application. Required. -->
+        <!-- Note: In Flash Builder, the SWF reference is set automatically. -->
+        <content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
 
 
-		<autoOrients>false</autoOrients>
+        <autoOrients>false</autoOrients>
         <fullScreen>false</fullScreen>
         <visible>true</visible>
-		<depthAndStencil>true</depthAndStencil>
-		<renderMode>direct</renderMode>
-		<requestedDisplayResolution>high</requestedDisplayResolution>
+        <depthAndStencil>true</depthAndStencil>
+        <renderMode>direct</renderMode>
+        <requestedDisplayResolution>high</requestedDisplayResolution>
     </initialWindow>
 
 
-	<supportedProfiles>extendedDesktop</supportedProfiles>
+    <supportedProfiles>extendedDesktop</supportedProfiles>
 
-	<icon>
-		<image16x16>appicons/16.png</image16x16>
-		<image32x32>appicons/32.png</image32x32>
-		<image128x128>appicons/128.png</image128x128>
-		<image192x192>appicons/192.png</image192x192>
-	</icon>
+    <icon>
+        <image16x16>appicons/16.png</image16x16>
+        <image32x32>appicons/32.png</image32x32>
+        <image128x128>appicons/128.png</image128x128>
+        <image192x192>appicons/192.png</image192x192>
+    </icon>
 
-<extensions>
-		<extensionID>com.tuarua.FreSwift</extensionID>
+    <extensions>
+        <extensionID>com.tuarua.FreSharp</extensionID>
+        <extensionID>com.tuarua.FreSwift</extensionID>
         <extensionID>com.tuarua.TaskbarProgressANE</extensionID>
     </extensions>
 </application>

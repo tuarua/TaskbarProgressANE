@@ -1,5 +1,6 @@
 package {
 
+import com.tuarua.FreSharp;
 import com.tuarua.FreSwift;
 import com.tuarua.TaskbarProgress;
 
@@ -18,7 +19,8 @@ import flash.utils.Timer;
 
 public class Main extends Sprite {
     public static const FONT:Font = new FiraSansSemiBold();
-    private var freSwiftANE:FreSwift = new FreSwift();
+    private var freSharpANE:FreSharp = new FreSharp(); // must create before all others
+    private var freSwiftANE:FreSwift = new FreSwift(); // must create before all others
     private var hasActivated:Boolean;
     private var statusLabel:TextField = new TextField();
 
@@ -72,6 +74,7 @@ public class Main extends Sprite {
     private function onExiting(event:Event):void {
         TaskbarProgress.dispose();
         freSwiftANE.dispose();
+        freSharpANE.dispose();
     }
 }
 }
