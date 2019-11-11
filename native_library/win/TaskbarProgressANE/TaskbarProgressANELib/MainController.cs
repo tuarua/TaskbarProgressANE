@@ -23,6 +23,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using TuaRua.FreSharp;
+using TuaRua.FreSharp.Exceptions;
 using FREObject = System.IntPtr;
 using FREContext = System.IntPtr;
 using Hwnd = System.IntPtr;
@@ -44,6 +45,7 @@ namespace TaskbarProgressLib {
         }
 
         private FREObject InitController(FREContext ctx, uint argc, FREObject[] argv) {
+            if (argc < 1 || argv[0] == FREObject.Zero) return new FreArgException().RawValue;
             var style = (TaskbarProgress.TaskbarStates) argv[0].AsInt();
             _airWindow = Process.GetCurrentProcess().MainWindowHandle;
             FreSharpLogger.GetInstance().Context = Context;
@@ -52,14 +54,14 @@ namespace TaskbarProgressLib {
         }
 
         private FREObject SetStyle(FREContext ctx, uint argc, FREObject[] argv) {
-            if (argv[0] == FREObject.Zero) return FREObject.Zero;
+            if (argc < 1 || argv[0] == FREObject.Zero) return new FreArgException().RawValue;
             var style = (TaskbarProgress.TaskbarStates) argv[0].AsInt();
             TaskbarProgress.SetState(_airWindow, style);
             return FREObject.Zero;
         }
 
         private FREObject SetProgress(FREContext ctx, uint argc, FREObject[] argv) {
-            if (argv[0] == FREObject.Zero) return FREObject.Zero;
+            if (argc < 1 || argv[0] == FREObject.Zero) return new FreArgException().RawValue;
             var progress = argv[0].AsInt();
             TaskbarProgress.SetValue(_airWindow, progress, 100);
             if (progress >= 100) {
