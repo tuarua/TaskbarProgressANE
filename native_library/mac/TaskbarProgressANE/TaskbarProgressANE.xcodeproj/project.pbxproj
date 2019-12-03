@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90B843CF23523BD70009FB87 /* SwiftController+FreSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B843CE23523BD70009FB87 /* SwiftController+FreSwift.swift */; };
 		CE05BF0B1F657B2F0019899B /* FreMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE05BF0A1F657B2F0019899B /* FreMacros.h */; };
 		CE05BF0D1F657B6C0019899B /* FreSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE05BF0C1F657B6C0019899B /* FreSwift.framework */; };
 		CE9ACAA11EEC67B9007F0BBE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9ACAA01EEC67B9007F0BBE /* Cocoa.framework */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90B843CE23523BD70009FB87 /* SwiftController+FreSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftController+FreSwift.swift"; sourceTree = "<group>"; };
 		CE05BF0A1F657B2F0019899B /* FreMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreMacros.h; sourceTree = "<group>"; };
 		CE05BF0C1F657B6C0019899B /* FreSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FreSwift.framework; path = Carthage/Build/Mac/FreSwift.framework; sourceTree = "<group>"; };
 		CE9ACA941EEC6609007F0BBE /* TaskbarProgressANE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaskbarProgressANE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,7 @@
 				CE9ACAB01EEC69E7007F0BBE /* TaskbarProgressANE.m */,
 				CE9ACAB61EEC6FF7007F0BBE /* SwiftController.swift */,
 				CE9ACAB91EEC85AF007F0BBE /* DockProgressBar.swift */,
+				90B843CE23523BD70009FB87 /* SwiftController+FreSwift.swift */,
 			);
 			path = TaskbarProgressANE;
 			sourceTree = "<group>";
@@ -145,22 +148,23 @@
 		CE9ACA8B1EEC6609007F0BBE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Tua Rua Ltd";
 				TargetAttributes = {
 					CE9ACA931EEC6609007F0BBE = {
 						CreatedOnToolsVersion = 8.3;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Manual;
 					};
 				};
 			};
 			buildConfigurationList = CE9ACA8E1EEC6609007F0BBE /* Build configuration list for PBXProject "TaskbarProgressANE" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CE9ACA8A1EEC6609007F0BBE;
 			productRefGroup = CE9ACA951EEC6609007F0BBE /* Products */;
@@ -209,6 +213,7 @@
 				CE9ACAB71EEC6FF7007F0BBE /* SwiftController.swift in Sources */,
 				CE9ACABA1EEC85AF007F0BBE /* DockProgressBar.swift in Sources */,
 				CE9ACAB11EEC69E7007F0BBE /* TaskbarProgressANE.m in Sources */,
+				90B843CF23523BD70009FB87 /* SwiftController+FreSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +224,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
@@ -280,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
@@ -323,8 +330,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "TaskbarProgressANE-Swift.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -352,7 +360,11 @@
 				HEADER_SEARCH_PATHS = ../../../includes;
 				INFOPLIST_FILE = TaskbarProgressANE/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = /Users/eoinlandy/SDKs/AIRSDK_32/runtimes/air/mac;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -366,7 +378,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -391,7 +403,11 @@
 				HEADER_SEARCH_PATHS = ../../../includes;
 				INFOPLIST_FILE = TaskbarProgressANE/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = /Users/eoinlandy/SDKs/AIRSDK_32/runtimes/air/mac;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -404,7 +420,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

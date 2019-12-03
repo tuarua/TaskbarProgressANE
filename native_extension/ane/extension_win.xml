@@ -3,7 +3,7 @@
     <id>com.tuarua.TaskbarProgressANE</id>
     <name>Taskbar Progress ANE</name>
     <copyright>This work is licensed under Apache License, Copyright (c) 2018 Tua Rua Ltd.</copyright>
-    <versionNumber>2.0.0</versionNumber>
+    <versionNumber>2.1.0</versionNumber>
     <platforms>
         <platform name="Windows-x86">
             <applicationDeployment>
