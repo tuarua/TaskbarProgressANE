@@ -1,10 +1,6 @@
-### 2.2.0
+### 2.1.0
 - macOS: Updated to FreSwift 4.3.0
 - WIN: Updated to FreSharp 2.4.0
-
-### 2.1.0
-- macOS: Updated to FreSwift 4.2.0
-- WIN: Updated to FreSharp 2.3.0
 
 ### 2.0.0
 - WIN Convert to C#
