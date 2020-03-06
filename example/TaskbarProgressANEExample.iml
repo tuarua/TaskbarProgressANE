@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="Main">
     <configurations>
-      <configuration name="Main" target-platform="Desktop" pure-as="true" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/bin-debug">
+      <configuration name="Main" target-platform="Desktop" pure-as="true" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/bin-release">
         <dependencies>
           <entries>
             <entry library-name="TaskbarProgressANE" library-level="project">
@@ -25,14 +25,7 @@
             <entry key="compiler.locale" value="en_US" />
           </map>
         </compiler-options>
-        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/src/Main-app.xml" package-file-name="Main">
-          <files-to-package>
-            <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/appicons/192.png" path-in-package="appicons/192.png" />
-            <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/appicons/128.png" path-in-package="appicons/128.png" />
-            <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/appicons/16.png" path-in-package="appicons/16.png" />
-            <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/appicons/32.png" path-in-package="appicons/32.png" />
-          </files-to-package>
-        </packaging-air-desktop>
+        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/src/Main-app.xml" package-file-name="Main" />
         <packaging-android />
         <packaging-ios />
       </configuration>

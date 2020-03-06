@@ -16,30 +16,19 @@ import Foundation
 import Cocoa
 import FreSwift
 
-public class SwiftController: NSObject, FreSwiftMainController {
+public class SwiftController: NSObject {
     public static var TAG = "TaskbarProgressOSXANE"
 
     public var context: FreContextSwift!
     public var functionsToSet: FREFunctionMap = [:]
     
     var progress: DockProgressBar!
-    @objc public func getFunctions(prefix: String) -> [String] {
-        functionsToSet["\(prefix)init"] = initController
-        functionsToSet["\(prefix)setProgress"] = setProgress
-        functionsToSet["\(prefix)setStyle"] = setStyle
-        
-        var arr: [String] = []
-        for key in functionsToSet.keys {
-            arr.append(key)
-        }
-        return arr
-    }
     
     func initController(ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
         guard argc > 0,
             let style = Int(argv[0])
             else {
-                return FreArgError(message: "initController").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
         progress = DockProgressBar(frame: NSRect(x: 0, y: 0, width: NSApp.dockTile.size.width, height: 12), style: style)
         return nil
@@ -49,7 +38,7 @@ public class SwiftController: NSObject, FreSwiftMainController {
         guard argc > 0,
             let val = Int(argv[0])
             else {
-                return FreArgError(message: "setProgress").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
         
         let asDouble = Double(val)
@@ -61,25 +50,10 @@ public class SwiftController: NSObject, FreSwiftMainController {
         guard argc > 0,
             let style = Int(argv[0])
             else {
-                return FreArgError(message: "setStyle").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
         progress.setStyle(style: style)
         return nil
     }
     
-    // Must have this function. It exposes the methods to our entry ObjC.
-    @objc public func callSwiftFunction(name: String, ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
-        if let fm = functionsToSet[name] {
-            return fm(ctx, argc, argv)
-        }
-        return nil
-    }
-    
-    @objc public func setFREContext(ctx: FREContext) {
-        self.context = FreContextSwift(freContext: ctx)
-    }
-    
-    @objc public func onLoad() {
-    
-    }
 }
