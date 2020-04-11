@@ -17,22 +17,17 @@
 #import "TaskbarProgressANE_oc.h"
 #import <TaskbarProgressANE/TaskbarProgressANE-Swift.h>
 
-SWIFT_DECL(TRTBP) // use unique prefix throughout to prevent clashes with other ANEs
+SWIFT_DECL(TRTBP)
 
 CONTEXT_INIT(TRTBP) {
     SWIFT_INITS(TRTBP)
     
-    /**************************************************************************/
-    /******* MAKE SURE TO ADD FUNCTIONS HERE THE SAME AS SWIFT CONTROLLER *****/
-    /**************************************************************************/
     static FRENamedFunction extensionFunctions[] =
     {
          MAP_FUNCTION(TRTBP, init)
         ,MAP_FUNCTION(TRTBP, setProgress)
         ,MAP_FUNCTION(TRTBP, setStyle)
     };
-    /**************************************************************************/
-    /**************************************************************************/
     
     SET_FUNCTIONS
     
