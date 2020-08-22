@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -159,7 +159,7 @@
 				};
 			};
 			buildConfigurationList = CE9ACA8E1EEC6609007F0BBE /* Build configuration list for PBXProject "TaskbarProgressANE" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -179,14 +179,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		CE9ACAB81EEC7289007F0BBE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "../../../native_extension/ane/build_multi.sh\n";
 		};
