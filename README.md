@@ -22,7 +22,7 @@ You will need:
 Change directory into the _example_ folder eg
 
 ```bash
-cd /MyMac/dev/AIR/DarkMode-ANE/example
+cd /MyMac/dev/AIR/TaskbarProgressANE/example
 ```
 
 Run the _"air-tools"_ command (You will need [AIR-Tools](https://github.com/tuarua/AIR-Tools/) installed)
