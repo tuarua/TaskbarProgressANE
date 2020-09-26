@@ -5,16 +5,10 @@
       <configuration name="Main" target-platform="Desktop" pure-as="true" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/bin-release">
         <dependencies>
           <entries>
-            <entry library-name="TaskbarProgressANE" library-level="project">
-              <dependency linkage="Merged" />
-            </entry>
-            <entry library-name="FreSwift" library-level="project">
-              <dependency linkage="Merged" />
-            </entry>
             <entry library-name="FiraSansSemiBold" library-level="project">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-name="FreSharp" library-level="project">
+            <entry library-name="extensions" library-level="project">
               <dependency linkage="Merged" />
             </entry>
           </entries>
@@ -44,5 +38,6 @@
     <orderEntry type="library" exported="" name="FreSwift" level="project" />
     <orderEntry type="library" exported="" name="FiraSansSemiBold" level="project" />
     <orderEntry type="library" exported="" name="FreSharp" level="project" />
+    <orderEntry type="library" exported="" name="extensions" level="project" />
   </component>
 </module>

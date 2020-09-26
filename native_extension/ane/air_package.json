@@ -1,0 +1,11 @@
+{
+  "name": "com.tuarua.TaskbarProgressANE",
+  "version": "2.3.0",
+  "repository": {
+    "url": "https://tuarua.github.io/air/air_packages.json"
+  },
+  "dependencies": {
+    "com.tuarua.FreSwift": "4.5.0",
+    "com.tuarua.FreSharp": "2.4.0"
+  }
+}
