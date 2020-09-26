@@ -1,6 +1,5 @@
 debug/
 docs/
 TaskbarProgressANE/
-FreSwift.ane
-FreSharp.ane
+*.ane
 platforms/mac/

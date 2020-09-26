@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="TaskbarProgressANE" type="flex">
-    <CLASSES>
-      <root url="jar://$DOCUMENTS$/TaskbarProgressANE/native_extension/ane/TaskbarProgressANE.ane!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
