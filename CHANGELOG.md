@@ -1,3 +1,7 @@
+### 2.4.0
+- macOS: Updated to FreSwift 5.0.0
+- WIN: Updated to FreSharp 2.5.0
+
 ### 2.3.0
 - macOS: Updated to FreSwift 4.5.0
 
