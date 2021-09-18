@@ -1,3 +1,6 @@
+### 2.6.0
+- macOS: Updated to FreSwift 5.2.0
+
 ### 2.5.0
 - macOS: Updated to FreSwift 5.1.0
 
