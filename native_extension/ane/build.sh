@@ -8,7 +8,7 @@ echo $pathtome
 
 PROJECTNAME=TaskbarProgressANE
 
-AIR_SDK="/Users/eoinlandy/SDKs/AIRSDK_33.1.1.633"
+AIR_SDK="/Users/eoinlandy/SDKs/AIRSDK_50.1.1"
 echo $AIR_SDK
 
 #Setup the directory.

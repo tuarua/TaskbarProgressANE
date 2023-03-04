@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/33.1">
+<application xmlns="http://ns.adobe.com/air/application/50.1">
   <id>com.tuarua.TaskbarProgressANEExample</id>
   <filename>Main</filename>
   <name>Main</name>
