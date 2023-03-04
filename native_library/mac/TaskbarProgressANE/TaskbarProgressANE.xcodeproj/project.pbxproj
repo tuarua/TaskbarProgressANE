@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -154,7 +154,7 @@
 				};
 			};
 			buildConfigurationList = CE9ACA8E1EEC6609007F0BBE /* Build configuration list for PBXProject "TaskbarProgressANE" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -340,7 +340,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					/Users/eoinlandy/SDKs/AIRSDK_33.1.1.633/runtimes/air/mac,
+					/Users/eoinlandy/SDKs/AIRSDK_50.1.1/runtimes/air/mac,
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
@@ -353,7 +353,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = /Users/eoinlandy/SDKs/AIRSDK_33.1.1.633/runtimes/air/mac;
+				LIBRARY_SEARCH_PATHS = /Users/eoinlandy/SDKs/AIRSDK_50.1.1/runtimes/air/mac;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 2.7.0;
 				OTHER_LDFLAGS = (
@@ -387,7 +387,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					/Users/eoinlandy/SDKs/AIRSDK_33.1.1.633/runtimes/air/mac,
+					/Users/eoinlandy/SDKs/AIRSDK_50.1.1/runtimes/air/mac,
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
@@ -400,7 +400,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = /Users/eoinlandy/SDKs/AIRSDK_33.1.1.633/runtimes/air/mac;
+				LIBRARY_SEARCH_PATHS = /Users/eoinlandy/SDKs/AIRSDK_50.1.1/runtimes/air/mac;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 2.7.0;
 				OTHER_LDFLAGS = (
